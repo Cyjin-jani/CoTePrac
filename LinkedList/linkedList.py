@@ -1,12 +1,11 @@
-class Node:
-    def __init__(self, item):
-        self.data = item
-        self.next = None
-
+# class Node:
+#     def __init__(self, item):
+#         self.data = item
+#         self.next = None
 
 class LinkedList:
-	def __init__(self):
-    	self.nodeCount = 0
+    def __init__(self):
+        self.nodeCount = 0
         self.head = None
         self.tail = None
 
@@ -20,7 +19,7 @@ class LinkedList:
             curr = curr.next
             i += 1
         return curr
-    
+
     # 리스트 순회
     def traverse(self):
         array = []
@@ -29,10 +28,10 @@ class LinkedList:
             array.append(curr.data)
             curr = curr.next
         return array
-    
-    # 리스트 길이 
+
+    # 리스트 길이
     def getLength(self):
-    return self.nodeCount
+        return self.nodeCount
 
     # 리스트에 원소 추가
     def insertAt(self, pos, newNode):
@@ -55,7 +54,7 @@ class LinkedList:
 
         self.nodeCount += 1
         return True
-    
+
     # 리스트 원소 삭제
     def popAt(self, pos):
         if pos < 1 or pos > self.nodeCount:
@@ -66,7 +65,7 @@ class LinkedList:
         if self.nodeCount == 1:
             self.head = None
             self.tail = None
-        elif pos==1:
+        elif pos == 1:
             self.head = curr.next
         else:
             prev = self.getAt(pos-1)
@@ -75,7 +74,7 @@ class LinkedList:
                 prev.next = None
             else:
                 prev.next = curr.next
-                
+
         self.nodeCount -= 1
         return curr.data
 
@@ -84,4 +83,4 @@ class LinkedList:
         self.tail.next = L.head
         if L.tail:
             self.tail = L.tail
-        self.nodeCount += L.nodeCount    
+        self.nodeCount += L.nodeCount
