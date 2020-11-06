@@ -5,7 +5,7 @@
 
 이론적인 부분에 대한 자세한 내용정리는
 아래 tistory블로그에 정리되어 있습니다.
-__(아직 비공개 입니다;;;)__
+
 
 [Jani의IT블로그](https://jani91.tistory.com/category/IT_TechBLOG/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B3%B5%EB%B6%80)
 
@@ -38,7 +38,9 @@ __(아직 비공개 입니다;;;)__
 - 그리디(Greedy)
 - 해쉬(Hash)
 - 구현(Implement)
-
+- 힙(heap: priority Queue(heapq))
+- 정렬(sort: arraySort)
+- 탐색(search: BFS/DFS)
 
 ---
 
