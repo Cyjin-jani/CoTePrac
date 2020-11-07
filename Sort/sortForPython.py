@@ -17,13 +17,12 @@ arrayTwo.sort()
 print(arrayTwo)
 
 # key를 활용하기
-
-arrayTrd = [('바나나', 2), ('사과', 5), ('당근', 3)]
+array = [('바나나', 2), ('사과', 5), ('당근', 3)]
 
 
 def setting(data):
     return data[1]
 
 
-results = sorted(array, key=setting)
-print(results)
+result = sorted(array, key=setting)
+print(result)
