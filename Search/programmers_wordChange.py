@@ -9,6 +9,8 @@ def checkWord(string1, string2):
 
 
 def solution(begin, target, words):
+    # 바꿀 수 있는 단어들 배열에 넣기
+    changable = []
     answer = 0
     # target이 words안에 없으면 변환 불가.
     if not target in words:
@@ -18,13 +20,30 @@ def solution(begin, target, words):
         return 0
 
     while begin != target:
-        for i, word in enumerate(words):
+        print('지금:', begin, '타겟', target)
+        for word in words:
             if checkWord(begin, word):
-                begin = word
+                if begin != word:
+                    changable.append(word)
+            else:
+                continue
+        print("현재 변화 가능한 단어들 후보", changable)
+        for data in changable:
+            print('현data', data)
+            if data == target:
+                begin = data
                 answer += 1
-                words.pop(i)
-                print('바꿈', begin)
-                break
+                print(answer)
+                return answer
+            elif checkWord(data, target):
+                changable = []
+                changable.append(data)
+
+        print("한 글자 변화시킴", begin, "에서", changable[0])
+        begin = changable[0]
+        words.remove(changable[0])
+        answer += 1
+        changable = []
 
     return answer
 
