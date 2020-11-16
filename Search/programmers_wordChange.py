@@ -1,6 +1,6 @@
 begin = 'hit'
-target = 'cog'
-words = ['hot', 'dot', 'dog', 'lot', 'log', 'cog']
+target = 'log'
+words = ['hot', 'dot', 'dog', 'lot', 'log', 'lop', 'cog']
 
 
 def checkWord(string1, string2):
