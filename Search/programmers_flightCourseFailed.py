@@ -1,3 +1,5 @@
+
+# 결국 망한 코드임.
 # tickets = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]
 # return : [ICN, JFK, HND, IAD]
 
